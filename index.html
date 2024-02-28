@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+    <title>Arkan | Web</title>
+  </head>
+  <body>
+    <nav>
+      <h1 class="nav-logo"><span class="logo-a">A</span>rkan</h1>
+
+      <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Help</li>
+      </ul>
+
+      <div class="auth">
+        <a href="">Login</a>
+        <button onclick="gantiText()">Sign in</button>
+      </div>
+
+      <div class="toggle" id="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <section class="content">
+      <div class="hero">
+        <h1><span class="name">Ayo</span> Bergabung <span class="txt-load"></span></h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt molestiae commodi pariatur nobis quaerat quidem, architecto molestias ullam! Odio, harum!</p>
+
+        <div class="btn-hero">
+          <button onclick="Pencet()">Join</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      const menuToggle = document.querySelector("#menu");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+
+      const Pencet = () => {
+        alert("Halo");
+      };
+
+      const textName = document.querySelector(".name");
+      const gantiText = () => {
+        textName.style.color = "#0096c7";
+        textName.innerHTML = "Arkan";
+      };
+      var typed = new Typed(".txt-load", {
+        strings: ["Bersama Kami"],
+        typeSpeed: 150,
+        backSpeed: 100,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
